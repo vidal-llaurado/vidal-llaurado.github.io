@@ -35,7 +35,9 @@ def check(root: Path):
         if url in canonical_urls:fail('duplicate canonical URL')
         canonical_urls.add(url)
         if not soup.title or not soup.title.get_text(strip=True):fail('missing title')
-        if not soup.find('meta',attrs={'name':'description'}):fail('missing description')
+        if path == root/'index.html':
+            if soup.find('meta', attrs={'name':'description'}):fail('homepage has a description fallback for link previews')
+        elif not soup.find('meta',attrs={'name':'description'}):fail('missing description')
         if soup.select_one('meta[name="robots"][content*="noindex"]'):fail('indexable page has noindex')
         if not soup.main:fail('missing main content')
         if soup.select('.language-nav, link[hreflang]'):fail('obsolete language navigation')
