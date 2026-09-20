@@ -45,6 +45,8 @@ def check(root: Path):
             share_image = url.rstrip('/')+'/assets/share-home.png'
             if not soup.find('meta', property='og:image', content=share_image):fail('homepage is missing its Open Graph share image')
             if not soup.find('meta', attrs={'name':'twitter:image', 'content':share_image}):fail('homepage is missing its Twitter share image')
+            if soup.find('meta', property='og:description'):fail('homepage share preview has an Open Graph description')
+            if soup.find('meta', attrs={'name':'twitter:description'}):fail('homepage share preview has a Twitter description')
             image = root/'assets/share-home.png'
             if not image.is_file():fail('homepage share image file is missing')
         for script in soup.find_all('script', type='application/ld+json'):
