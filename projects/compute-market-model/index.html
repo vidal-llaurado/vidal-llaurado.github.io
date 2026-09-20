@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Compute Market Model | Joan Vidal Llauradó</title>
+<meta content="Stochastic compute curves, contract valuation and portfolio control with explicit delivery, collateral and cash constraints." name="description"/>
+<meta content="index,follow" name="robots"/>
+<link href="https://vidal-llaurado.github.io/projects/compute-market-model/" rel="canonical"/>
+<link href="/assets/site-icon-jl.png" rel="icon" type="image/png"/>
+<link href="/assets/styles.css?v=67452c882ca3" rel="stylesheet"/>
+<meta content="website" property="og:type"/>
+<meta content="Compute Market Model" property="og:title"/>
+<meta content="Stochastic delivery curves for compute pricing, infrastructure financing and portfolio control." property="og:description"/>
+<meta content="https://vidal-llaurado.github.io/projects/compute-market-model/" property="og:url"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","@id":"https://vidal-llaurado.github.io/projects/compute-market-model/#software","url":"https://vidal-llaurado.github.io/projects/compute-market-model/","name":"Compute Market Model","description":"Stochastic delivery curves for compute pricing, infrastructure financing and portfolio control.","inLanguage":"en","version":"2026.9.20","license":"https://spdx.org/licenses/MIT.html","author":{"@type":"Person","@id":"https://vidal-llaurado.github.io/#joan-vidal-llaurado","name":"Joan Vidal Llauradó","sameAs":"https://orcid.org/0009-0002-1918-5458"},"programmingLanguage":"Python","runtimePlatform":"Python 3.11 or later","dateModified":"2026-09-20","codeRepository":"https://github.com/vidal-llaurado/compute-market-model","datePublished":"2026-09"}</script>
+<meta content="#080808" name="theme-color"/>
+<meta content="Joan Vidal Llauradó" name="author"/>
+<meta content="Joan Vidal Llauradó" property="og:site_name"/>
+<meta content="en_GB" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Compute Market Model" name="twitter:title"/>
+<meta content="Stochastic delivery curves for compute pricing, infrastructure financing and portfolio control." name="twitter:description"/>
+</head>
+<body class="paper-page project-page"><a class="skip-link" href="#content">Skip to content</a>
+<div class="page">
+<div class="layout">
+<aside aria-label="Profile information" class="identity"> <div class="identity-header">
+<div class="identity-info"> <h1>Joan Vidal Llauradó</h1> <p class="identity-line">Researcher</p> <p class="identity-line">Barcelona, Spain</p> <p class="identity-line contact-email"><a href="mailto:vidal.llaurado@gmail.com">vidal.llaurado@gmail.com</a>
+</p> </div> </div> <div class="profile-meta"> <div class="profile-links"> <p class="identity-line contact-orcid"><a class="orcid-link" href="https://orcid.org/0009-0002-1918-5458" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="orcid-mark" height="13" viewbox="0 0 256 256" width="13" xmlns="http://www.w3.org/2000/svg"><circle cx="128" cy="128" fill="#A6CE39" r="128"></circle><path d="M86.3 186.2H70.9V79.1h15.4v107.1zM116.1 79.1h41.4c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.6-57 53.6h-41.4V79.1zm15.4 93.3h24.5c34.9 0 42.9-26.5 42.9-39.7C198.9 115 189 93 140.9 93h-9.4v79.4zM88.7 56.8c0 5.5-4.5 10.1-10.1 10.1s-10.1-4.6-10.1-10.1c0-5.6 4.5-10.1 10.1-10.1s10.1 4.5 10.1 10.1z" fill="#fff"></path></svg><span>0009-0002-1918-5458</span></a>
+</p> </div> <p class="profile-link"><a aria-label="GitHub: vidal-llaurado" href="https://github.com/vidal-llaurado" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="github-mark" height="13" viewbox="0 0 98 96" width="13" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.195-22.23-5.42-22.23-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.73c4.125 0 8.33.571 12.213 1.73 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor" fill-rule="evenodd"></path></svg><span>vidal-llaurado</span></a>
+</p> <p class="profile-link profile-link-secondary"><a aria-label="QuantConnect: joan-vidal-llaurado" href="https://www.quantconnect.com/u/joan-vidal-llaurado" rel="noopener noreferrer" target="_blank"><img alt="" class="quantconnect-mark" height="13" src="/assets/qc-icon.svg" width="13"/><span>joan-vidal-llaurado</span></a>
+</p> <section aria-labelledby="languages-heading" class="profile-section">
+<h2 id="languages-heading">Languages</h2>
+<p>Catalan, Spanish, English, French, and German</p>
+</section> </div> </aside>
+<main id="content">
+<p class="back-link"><a href="/">Back</a>
+</p>
+<article class="document">
+<header>
+<h2 class="page-title">Compute Market Model</h2>
+<p class="page-subtitle">Stochastic delivery curves for compute pricing, infrastructure financing and portfolio control.</p>
+<p class="page-meta"><time datetime="2026-09">September 2026</time>
+</p>
+</header>
+<nav aria-label="Project resources" class="resource-links"><a href="https://github.com/vidal-llaurado/compute-market-model" rel="noopener noreferrer" target="_blank">GitHub</a><a href="/projects/compute-market-model/compute-market-model.pdf" rel="noopener noreferrer" target="_blank">Model</a><a href="/projects/compute-market-model/compute-market-model-choices.pdf" rel="noopener noreferrer" target="_blank">Model choices</a><a href="/projects/compute-market-model/compute-market-research-report.pdf" rel="noopener noreferrer" target="_blank">Research report</a>
+</nav>
+<section aria-labelledby="overview-heading">
+<h3 id="overview-heading">Model</h3>
+<p>The model connects compute, power, rates and funding through a shared factor state. Contracts, equipment appraisals and hedges read the same curves; capacity, commitments, cash and debt determine what the operator can deliver and finance.</p>
+<p>A reservation price is the payment that preserves the optimized value of the existing business after the new contract enters its book. Because the payment changes available cash, it can change which delivery and hedging policies are feasible.</p>
+<p>Two numerical methods use this market law. A finite scenario program produces reservation-payment certificates. A path controller jointly chooses dispatch, financing and financial positions against a fitted continuation. Each solves a stated decision problem, with its own approximation error.</p>
+</section>
+<section aria-labelledby="features-heading">
+<h3 id="features-heading">Capabilities</h3>
+<ul class="project-list">
+<li>Shared affine factors for compute, power, rates and funding</li>
+<li>Futures, funded puts, a fixed-strike forward and a periodic cap with dated cash flows</li>
+<li>Factor and delivery-bucket risk, including shocks outside the fitted factor span</li>
+<li>Separate operating value, lender appraisal and liquidation proceeds</li>
+<li>Calibration with declared anchors, identification rank and parameter uncertainty</li>
+</ul>
+</section>
+<section aria-labelledby="evidence-heading">
+<h3 id="evidence-heading">Retained experiments</h3>
+<p>The study uses synthetic inputs, shared market paths and saved conditional innovations.</p>
+<table class="benchmark-table">
+<thead>
+<tr><th scope="col">Experiment</th><th scope="col">Count</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">Training paths</th><td>4,096</td>
+</tr>
+<tr><th scope="row">Independent holdout paths</th><td>1,024</td>
+</tr>
+<tr><th scope="row">Conditional innovations per decision</th><td>256</td>
+</tr>
+<tr><th scope="row">Paths per named stress</th><td>512</td>
+</tr>
+<tr><th scope="row">Named stresses</th><td>13</td>
+</tr>
+<tr><th scope="row">Operating intervals</th><td>8</td>
+</tr>
+</tbody>
+</table>
+</section>
+</article>
+</main>
+</div>
+</div>
+</body>
+</html>
