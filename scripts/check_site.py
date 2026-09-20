@@ -41,6 +41,12 @@ def check(root: Path):
         if soup.select('.language-nav, link[hreflang]'):fail('obsolete language navigation')
         og = soup.find('meta',property='og:url')
         if not og or og['content']!=url:fail('Open Graph URL differs from canonical')
+        if path == root/'index.html':
+            share_image = url.rstrip('/')+'/assets/share-home.png'
+            if not soup.find('meta', property='og:image', content=share_image):fail('homepage is missing its Open Graph share image')
+            if not soup.find('meta', attrs={'name':'twitter:image', 'content':share_image}):fail('homepage is missing its Twitter share image')
+            image = root/'assets/share-home.png'
+            if not image.is_file():fail('homepage share image file is missing')
         for script in soup.find_all('script', type='application/ld+json'):
             try:
                 data=json.loads(script.string)
